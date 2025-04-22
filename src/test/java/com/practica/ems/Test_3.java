@@ -14,6 +14,7 @@ import com.practica.excecption.EmsInvalidNumberOfDataException;
 import com.practica.excecption.EmsInvalidTypeException;
 import com.practica.genericas.FechaHora;
 
+
 public class Test_3 {
 	private static ContactosCovid contactosCovid;
 
