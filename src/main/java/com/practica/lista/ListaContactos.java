@@ -1,6 +1,5 @@
 package com.practica.lista;
 
-import com.practica.genericas.Coordenada;
 import com.practica.genericas.FechaHora;
 import com.practica.genericas.PosicionPersona;
 
@@ -105,14 +104,7 @@ public class ListaContactos {
 		}
 		return false;
 	}
-	
-	private void insertarPersona (String documento, NodoPersonas nodo) {
-		NodoPersonas aux = nodo, nuevo = new NodoPersonas(documento, null);
-		while(aux.getSiguiente()!=null) {				
-			aux = aux.getSiguiente();				
-		}
-		aux.setSiguiente(nuevo);		
-	}
+
 	
 	public int personasEnCoordenadas () {
 		NodoPosicion aux = this.lista.getListaCoordenadas();
