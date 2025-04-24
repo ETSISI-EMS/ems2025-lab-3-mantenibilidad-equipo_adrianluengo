@@ -4,7 +4,6 @@ import com.practica.excecption.EmsDuplicateLocationException;
 import com.practica.excecption.EmsDuplicatePersonException;
 import com.practica.excecption.EmsInvalidNumberOfDataException;
 import com.practica.excecption.EmsInvalidTypeException;
-import com.practica.genericas.FechaHora;
 
 public class Principal {
 	
@@ -24,8 +23,6 @@ public class Principal {
 		System.out.println(contactosCovid.getListaContactos().tamanioLista());
 		System.out.println(contactosCovid.getListaContactos().getPrimerNodo());
 		System.out.println(contactosCovid.getListaContactos());
-		FechaHora ini = new FechaHora(25,5,2021,16,30);
-		FechaHora fin = new FechaHora(25,5,2021,16,30);
 		System.out.println("No me calientes lo mio");
 	}
 }
