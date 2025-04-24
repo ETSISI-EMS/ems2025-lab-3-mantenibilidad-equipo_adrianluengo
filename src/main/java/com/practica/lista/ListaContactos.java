@@ -1,6 +1,5 @@
 package com.practica.lista;
 
-import com.practica.genericas.Coordenada;
 import com.practica.genericas.FechaHora;
 import com.practica.genericas.PosicionPersona;
 
@@ -105,14 +104,7 @@ public class ListaContactos {
 		}
 		return false;
 	}
-	
-	private void insertarPersona (String documento, NodoPersonas nodo) {
-		NodoPersonas aux = nodo, nuevo = new NodoPersonas(documento, null);
-		while(aux.getSiguiente()!=null) {				
-			aux = aux.getSiguiente();				
-		}
-		aux.setSiguiente(nuevo);		
-	}
+
 	
 	public int personasEnCoordenadas () {
 		NodoPosicion aux = this.lista.getListaCoordenadas();
@@ -144,13 +136,11 @@ public class ListaContactos {
 	 * coordenadas, no tienen una utilidad en sí misma, más allá de comprobar que
 	 * nuestra lista funciona de manera correcta.
 	 */
-	
 	public int numNodosCoordenadaEntreDosInstantes(FechaHora inicio, FechaHora fin) {
 		if(this.size==0)
 			return 0;
 		NodoTemporal aux = lista;
 		int cont = 0;
-		int a;
 		cont = 0;
 		while(aux!=null) {
 			if(aux.getFecha().compareTo(inicio)>=0 && aux.getFecha().compareTo(fin)<=0) {
@@ -172,7 +162,7 @@ public class ListaContactos {
 	@Override
 	public String toString() {
 		String cadena="";
-		int a,cont;
+		int cont;
 		cont=0;
 		NodoTemporal aux = lista;
 		for(cont=1; cont<size; cont++) {
